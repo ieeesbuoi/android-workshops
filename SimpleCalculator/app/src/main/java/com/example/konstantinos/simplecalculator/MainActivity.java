@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText firstNum;
@@ -28,8 +29,14 @@ public class MainActivity extends AppCompatActivity {
                 float num1 = Float.parseFloat(firstNum.getText().toString());
                 float num2 = Float.parseFloat(secondNum.getText().toString());
 
-                float result = num1 + num2;
-                total.setText(Float.toString(result));
+                if(firstNum.getText().toString().trim().length() > 1 && secondNum.getText().toString().trim().length() > 1) {
+                    float result = num1 + num2;
+                    total.setText(Float.toString(result));
+
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "You did not enter numbers", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -41,8 +48,14 @@ public class MainActivity extends AppCompatActivity {
                 float num1 = Float.parseFloat(firstNum.getText().toString());
                 float num2 = Float.parseFloat(secondNum.getText().toString());
 
-                float result = num1 * num2;
-                total.setText(Float.toString(result));
+                if(firstNum.getText().toString().trim().length() > 1 && secondNum.getText().toString().trim().length() > 1) {
+                    float result = num1 * num2;
+                    total.setText(Float.toString(result));
+
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "You did not enter numbers", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
