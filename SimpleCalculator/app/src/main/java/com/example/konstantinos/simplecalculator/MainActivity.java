@@ -25,7 +25,10 @@ public class MainActivity extends AppCompatActivity {
         plusBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                float result = Float.parseFloat(firstNum.getText().toString()) + Float.parseFloat(secondNum.getText().toString());
+                float num1 = Float.parseFloat(firstNum.getText().toString());
+                float num2 = Float.parseFloat(secondNum.getText().toString());
+
+                float result = num1 + num2;
                 total.setText(Float.toString(result));
             }
         });
@@ -35,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
         multiplyBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                float result = Float.parseFloat(firstNum.getText().toString()) * Float.parseFloat(secondNum.getText().toString());
+                float num1 = Float.parseFloat(firstNum.getText().toString());
+                float num2 = Float.parseFloat(secondNum.getText().toString());
+
+                float result = num1 * num2;
                 total.setText(Float.toString(result));
             }
         });
