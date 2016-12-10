@@ -26,10 +26,11 @@ public class MainActivity extends AppCompatActivity {
         plusBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                float num1 = Float.parseFloat(firstNum.getText().toString());
-                float num2 = Float.parseFloat(secondNum.getText().toString());
+                if(firstNum.getText().toString().trim().length() >= 1 && secondNum.getText().toString().trim().length() >= 1) {
+                    float num1 = Float.parseFloat(firstNum.getText().toString());
+                    float num2 = Float.parseFloat(secondNum.getText().toString());
 
-                if(firstNum.getText().toString().trim().length() > 1 && secondNum.getText().toString().trim().length() > 1) {
+
                     float result = num1 + num2;
                     total.setText(Float.toString(result));
 
@@ -45,10 +46,11 @@ public class MainActivity extends AppCompatActivity {
         multiplyBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                float num1 = Float.parseFloat(firstNum.getText().toString());
-                float num2 = Float.parseFloat(secondNum.getText().toString());
+                if(firstNum.getText().toString().trim().length() >= 1 && secondNum.getText().toString().trim().length() >= 1) {
+                    float num1 = Float.parseFloat(firstNum.getText().toString());
+                    float num2 = Float.parseFloat(secondNum.getText().toString());
 
-                if(firstNum.getText().toString().trim().length() > 1 && secondNum.getText().toString().trim().length() > 1) {
+
                     float result = num1 * num2;
                     total.setText(Float.toString(result));
 
